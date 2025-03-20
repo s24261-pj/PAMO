@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="weight"
+        android:hint="@string/hint_weight"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="height"
+        android:hint="@string/hint_height"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/calculator_fragment_button_color"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_calculate" />
+</LinearLayout>

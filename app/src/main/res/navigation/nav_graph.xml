@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calculatorFragment">
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.pamo_s24261.CalculatorFragment"
+        android:label="@string/calculator_fragment_label">
+        <action
+            android:id="@+id/action_calculatorFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.pamo_s24261.ResultFragment"
+        android:label="@string/result_fragment_label" />
+</navigation>

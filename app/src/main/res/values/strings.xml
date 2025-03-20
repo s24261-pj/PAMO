@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">pamo-s24261</string>
+
+    <string name="calculator_fragment_label">Kalkulator BMI</string>
+    <color name="calculator_fragment_button_color">#99C24D</color>
+
+    <string name="result_fragment_label">Wynik</string>
+
+    <string name="hint_weight">Masa (kg)</string>
+    <string name="hint_height">Wzrost (m)</string>
+    <string name="btn_calculate">Oblicz</string>
+</resources>
