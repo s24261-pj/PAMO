@@ -1,5 +1,6 @@
 package com.example.pamo_s24261;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,7 @@ public class ResultFragment extends Fragment {
             double bmi = arguments.getDouble(KEY_BMI, 0);
             String status = arguments.getString(KEY_STATUS, "");
 
-            String resultText = String.format("BMI: %.2f\nStatus: %s", bmi, status);
+            @SuppressLint("DefaultLocale") String resultText = String.format("BMI: %.2f\nStatus: %s", bmi, status);
             tvResult.setText(resultText);
         }
     }

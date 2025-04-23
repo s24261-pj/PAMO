@@ -14,12 +14,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.example.pamo_s24261.service.BMICalculatorService;
+
 public class CalculatorFragment extends Fragment {
     private static final String KEY_BMI = "BMI";
     private static final String KEY_STATUS = "STATUS";
 
     private EditText etWeight;
     private EditText etHeight;
+    private final BMICalculatorService bmiService = new BMICalculatorService();
 
     @Nullable
     @Override
@@ -49,8 +52,8 @@ public class CalculatorFragment extends Fragment {
             final double weight = Double.parseDouble(weightStr);
             double height = Double.parseDouble(heightStr);
 
-            final double bmi = computeBMI(weight, height);
-            final String status = getBMIStatus(bmi);
+            final double bmi = bmiService.computeBMI(weight, height);
+            final String status = bmiService.getBMIStatus(bmi);
 
             Bundle bundle = new Bundle();
             bundle.putDouble(KEY_BMI, bmi);
@@ -60,25 +63,6 @@ public class CalculatorFragment extends Fragment {
                     .navigate(R.id.action_calculatorFragment_to_resultFragment, bundle);
         } catch (NumberFormatException e) {
             Toast.makeText(requireContext(), "Podaj prawidłowe dane!", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private double computeBMI(double weight, double height) {
-        if (height > 3) {
-            height /= 100.0;
-        }
-        return weight / (height * height);
-    }
-
-    private String getBMIStatus(double bmi) {
-        if (bmi < 18.5) {
-            return "niedowaga";
-        } else if (bmi < 25) {
-            return "optimum";
-        } else if (bmi < 30) {
-            return "nadwaga";
-        } else {
-            return "otyłość";
         }
     }
 }

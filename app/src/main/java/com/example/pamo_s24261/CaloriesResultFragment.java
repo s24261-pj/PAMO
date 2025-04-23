@@ -1,5 +1,6 @@
 package com.example.pamo_s24261;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ public class CaloriesResultFragment extends Fragment {
         Bundle args = getArguments();
         if (args != null) {
             calories = args.getDouble("calories", 0);
-            String result = String.format("Twoje dzienne zapotrzebowanie:\n%.0f kcal", calories);
+            @SuppressLint("DefaultLocale") String result = String.format("Twoje dzienne zapotrzebowanie:\n%.0f kcal", calories);
             tvCalories.setText(result);
         }
 

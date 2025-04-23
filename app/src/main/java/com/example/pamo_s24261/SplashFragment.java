@@ -25,9 +25,7 @@ public class SplashFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Navigation.findNavController(view)
-                    .navigate(R.id.action_splashFragment_to_homeFragment);
-        }, 3000);
+        new Handler(Looper.getMainLooper()).postDelayed(() -> Navigation.findNavController(view)
+                .navigate(R.id.action_splashFragment_to_homeFragment), 3000);
     }
 }

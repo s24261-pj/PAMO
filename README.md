@@ -1,1 +1,1 @@
-# Author: Mateusz Kopczyński (s24261)
+# Author: Mateusz Kopczyński s24261

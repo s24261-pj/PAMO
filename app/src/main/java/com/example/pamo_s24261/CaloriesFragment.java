@@ -16,7 +16,6 @@ public class CaloriesFragment extends Fragment {
     private EditText etAge, etWeight, etHeight;
     private RadioGroup genderGroup;
     private Spinner activitySpinner;
-    private Button btnCalculate;
 
     @Nullable
     @Override
@@ -35,7 +34,7 @@ public class CaloriesFragment extends Fragment {
         etHeight = view.findViewById(R.id.etHeight);
         genderGroup = view.findViewById(R.id.genderGroup);
         activitySpinner = view.findViewById(R.id.activitySpinner);
-        btnCalculate = view.findViewById(R.id.btnCalculateCalories);
+        Button btnCalculate = view.findViewById(R.id.btnCalculateCalories);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 requireContext(),
