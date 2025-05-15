@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>BMI Chart</title>
+    <script src="chart.umd.min.js"></script>
+    <style>
+        html, body, #bmiChart {
+          margin:0; padding:0;
+          width:100%; height:100%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="bmiChart"></canvas>
+<script>
+    const ctx = document.getElementById('bmiChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec'],
+            datasets: [{
+                label: 'BMI',
+                data: [34.5, 14.2, 23.8, 27.5, 20.1, 18.2, 32.1],
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'BMI'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Miesiąc'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

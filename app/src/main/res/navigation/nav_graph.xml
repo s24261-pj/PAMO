@@ -28,6 +28,13 @@
         <action
             android:id="@+id/action_homeFragment_to_caloriesFragment"
             app:destination="@id/caloriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_bmiWebChartFragment"
+            app:destination="@id/bmiWebChartFragment" />
     </fragment>
 
     <fragment
@@ -71,4 +78,16 @@
         android:name="com.example.pamo_s24261.RecipesFragment"
         android:label="@string/recipes_fragment_label"
         tools:layout="@layout/fragment_recipes" />
+
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.example.pamo_s24261.ShoppingListFragment"
+        android:label="@string/shopping_list_label"
+        tools:layout="@layout/fragment_shopping_list" />
+
+    <fragment
+        android:id="@+id/bmiWebChartFragment"
+        android:name="com.example.pamo_s24261.BmiWebChartFragment"
+        android:label="@string/bmi_chart_label"
+        tools:layout="@layout/fragment_bmi_webview" />
 </navigation>

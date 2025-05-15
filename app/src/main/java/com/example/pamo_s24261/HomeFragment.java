@@ -26,12 +26,19 @@ public class HomeFragment extends Fragment {
 
         Button btnBmi = view.findViewById(R.id.btnBMI);
         Button btnCalories = view.findViewById(R.id.btnCalories);
+        Button btnShopping = view.findViewById(R.id.btnShopping);
+        Button btnWebChart = view.findViewById(R.id.btnBmiWebChart);
 
         btnBmi.setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_calculatorFragment));
 
         btnCalories.setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_caloriesFragment));
-    }
 
+        btnShopping.setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_shoppingListFragment));
+
+        btnWebChart.setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_bmiWebChartFragment));
+    }
 }

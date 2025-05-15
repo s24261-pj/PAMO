@@ -31,4 +31,7 @@
     <string name="calories_fragment_label">Kalkulator kalorii</string>
     <string name="calories_result_fragment_label">Zapotrzebowanie kaloryczne</string>
     <string name="recipes_fragment_label">Rekomendacje kulinarne</string>
+
+    <string name="shopping_list_label">Lista zakupów</string>
+    <string name="bmi_chart_label">Wykres BMI</string>
 </resources>
